@@ -1,5 +1,11 @@
 package com.ztm.dsa.Arrays;
 
+/**
+ * <h1>Custom Array Implementation</h1>
+ * @author Kajal Tiwari
+ * @version 1.0.0
+ * @since 5/27/2022
+ */
 public class CustomArray {
     private int length;
     String[] data;

@@ -2,6 +2,11 @@ package com.ztm.dsa.Arrays;
 
 import java.util.*;
 
+/**
+ * ArrayList methods
+ * @author Kajal Tiwari
+ *
+ */
 public class ArrayList {
     public static void main(String[] args) {
         List<String> list =new java.util.ArrayList<>();

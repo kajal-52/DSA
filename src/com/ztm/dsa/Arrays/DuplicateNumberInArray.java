@@ -2,11 +2,17 @@ package com.ztm.dsa.Arrays;
 
 import java.util.*;
 import java.util.ArrayList;
-/*
-How do you find the duplicate number on a given integer array?
-int arr[]={1,3,4,5,3,6,5,78}
-int result[] = {3,5}
+
+/**
+ * <h1>How do you find the duplicate number on a given integer array?</h1>
+ * int arr[]={1,3,4,5,3,6,5,78}
+ * int result[] = {3,5}
+ *  @author Kajal Tiwari
+ *  @version 1.0.0
+ *  @since 5/27/2022
  */
+
+
 public class DuplicateNumberInArray {
     public static List<Integer> findDuplicate(int[] arr){
         Arrays.sort(arr);

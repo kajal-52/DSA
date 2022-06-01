@@ -10,7 +10,7 @@ frequency required by each element
    5->skip
    8->2
    9->3
-sum= 2+3+2+3 =>11
+sum= 2+3+2+3 =>10
  */
 public class FrequencyInArray {
     public int getFrequencySumInArray(int[] arr, int m){
@@ -25,19 +25,18 @@ public class FrequencyInArray {
                 previous=arr[i];
                 if (count<m){
                     result+=m-count;
-                    count=0;
                 }
-                else {
-                    count=0;
-                    continue;
-                }
+                count=1;
+            }
+            if (i==arr.length-1){
+                result+=m-count;
             }
         }
         return result;
     }
     public static void main(String[] args) {
         FrequencyInArray array= new FrequencyInArray();
-        int[] arr = {2, 2, 4,5,5,5,5,5,8,8,9};
+        int[] arr = {2, 2, 4,5,5,5,5,5,8,8,9,9};
         int m = 4;
         int res = array.getFrequencySumInArray(arr,m);
         System.out.println(res);
