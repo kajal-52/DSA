@@ -4,26 +4,25 @@ public class EquilibriumIndex {
     public static int findEquilibriumIndex(int[] arr){
                 //Your code goes here
                 int n=arr.length;
-                int sum1=0;
-                int sum2=arr[n-1];
-                int i =0;
-                int j=n-1;
-                while (i!=j){
-                    if(sum1<sum2){
-                        sum1+=arr[i];
-                        i+=1;
-                    }else if(sum1>sum2){
-                        sum2+=arr[j-1];
-                        j-=1;
-                    }else {
-                        return i;
-                    }
-                }
+                int sumR=0;
+                int sumL=0;
+                for (int i = 1; i < n; i++) {
+                    sumR+=arr[i];
+        }
+                for (int j = 1; j <n ; j++) {
+//                    System.out.println(sumL +"->"+sumR);
+                    if(sumL!=sumR){
+                        sumL += arr[j - 1];
+                        sumR -= arr[j];
+                    }else
+                        return j-1;
+
+                 }
                 return 0;
             }
 
     public static void main(String[] args) {
-        int[] arr= {1,7,3,6,6,5,6};
+        int[] arr= {6,3,2,6,5,6};
         int res=findEquilibriumIndex(arr);
         System.out.println(res);
     }
